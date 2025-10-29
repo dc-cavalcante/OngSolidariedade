@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Solidariedade - Página Inicial</title>
+    <link rel="shortcut icon" href="assets/Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <header>
-        <img src="assets/Imagens/logo.png" alt="Logotipo da ONG Solidariedade, mostrando um cão e um gato" width="250px">
+    <header class="main-header">
+        <div class="header-content grid-container">
+        <img src="assets/Imagens/logo.png" alt="" width="250px" class="imagem">
+        <div class="header-text-group">
         <h1>ONG Solidariedade</h1>
-        <p>Transformando vidas através de ações sociais e voluntariado</p>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
+        <p class="tagline">Transformando vidas através de ações sociais e voluntariado</p>
+        </div>
+    </div>
+    <nav class="main-nav" aria-label="Navegação Principal">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Início</a></li>
+            <li><a href="projetos.html"class="nav-link">Projetos</a></li>
+            <li><a href="cadastro.html"class="nav-link">Cadastro</a></li>
         </ul>
     </nav>
-    </header>
+</header>
 
-    <main>
-        <section>
+    <main class="main-content grid-container">
+        <section class="section-content grid-col-12 grid-col-lg-8">
             <h2>Sobre a ONG Solidariedade</h2>
             <article>
                 <p>A ONG Solidariedade é uma organização sem fins lucrativos dedicada a promover o bem-estar social em comunidades vulneráveis. Fundada em 2010, atuamos em áreas como educação, saúde e meio ambiente, impactando mais de 10.000 pessoas anualmente.</p>
@@ -31,20 +37,29 @@
             </article>
         </section>
 
-        <section>
+        <section class="section-support grid-col-12 grid-col-lg-4">
             <h2>Por Que Nos Apoiar?</h2>
             <p>Seu apoio faz a diferença. Junte-se a nós como voluntário ou doador.</p>
-            <img src="assets/Imagens/voluntarios.webp" alt="Foto de voluntários ajudando crianças em uma comunidade, com sorrisos e atividades educativas">
+            <img src="assets/Imagens/voluntarios.webp" alt="Foto de voluntários ajudando crianças em uma comunidade, com sorrisos e atividades educativas" class="responsive-img">
+            <div class="button-group">
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+            <a href="cadastro.html"class="button secondary-btn btn-large">Quero Me Cadastrar</a>
+            <a href="doacao.html"class="button secondary-btn btn-large" >Quero Doar</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-    <address>
+    <footer class="main-footer">
+    <div class="grid-container">
+    <address class="footer-contact grid-col-12 grid-col-md-6">
         <h3>Contato</h3>
         <p>Endereço: Rua das Flores, 123 - São Paulo, SP</p>
         <p>Telefone: (11) 99999-9999 | E-mail: contato@ongsolidariedade.org.br</p>
     </address>
+    <div class="footer-copy grid-col-12 grid-col-md-6">
         <small>&copy; 2023 ONG Solidariedade. Todos os direitos reservados. Desenvolvido por Danilo Cavalcante</small>
+    </div>
+    </div>
     </footer>
 </body>
 </html>
