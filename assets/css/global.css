@@ -312,11 +312,85 @@ small {
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
 }
 .alert-error {
     background-color: var(--color-primary-100); 
     color: var(--color-primary-900); 
     border: 1px solid var(--color-primary-500);
+}
+.success-wrapper {
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-sm);
+}
+.success-box {
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-xl);
+}
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    opacity: 1;
+    transition: opacity var(--transition-speed);
+}
+
+
+.hidden-modal {
+    display: none;
+    opacity: 0;
+}
+
+
+.modal-buttons-group {
+    display: flex;
+    flex-direction: column; 
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.modal-buttons-group button {
+    width: 100%;
+    
+    font-size: var(--font-size-body); 
+    padding: var(--spacing-xs) var(--spacing-md);
+}
+
+.modal-buttons-group .button-primary { 
+    background-color: var(--color-secondary-900);
+}
+.modal-buttons-group .button-primary:hover {
+     background-color: var(--color-secondary-500); 
+}
+
+
+.modal-buttons-group .button-secondary { 
+    background-color: var(--color-neutral-000); 
+    color: var(--color-secondary-900); 
+    border: 2px solid var(--color-secondary-900);
+}
+.modal-buttons-group .button-secondary:hover {
+     background-color: var(--color-secondary-100);
+}
+
+.next-step-block {
+    margin-top: var(--spacing-lg);
+}
+
+.button-large {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-h3);
+    margin-top: var(--spacing-lg);
 }
 .tag {
     display: inline-block;

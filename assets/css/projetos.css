@@ -37,6 +37,24 @@ article:hover {
 article h3 {
     color: var(--color-primary-500);
 }
+.volunteer-actions {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+    justify-content: flex-start;  
+}
+.volunteer-actions button {
+    flex-grow: 1; 
+    min-width: 150px; 
+}
+
+.tag-secondary {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    display: inline-block;
+    background-color: var(--color-neutral-000);
+}
+
 @media (min-width: 768px) {
     article {
         flex-direction: row;

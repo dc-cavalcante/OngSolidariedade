@@ -7,12 +7,14 @@
     <link rel="shortcut icon" href="assets/Imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="projetos.html">
 </head>
 <body>
     <header class="main-header">
     <div class="header-content grid-container">
         
-        <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250px" class="imagem">
+        <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250" class="imagem">
         
         <div class="header-text-group">
             <h1>ONG Solidariedade</h1>
@@ -43,37 +45,21 @@
     </nav>
 </header>
 
-    <main class="main-content grid-container">
-        <section class="section-content grid-col-12 grid-col-lg-1">
-            <h2>Sobre a ONG Solidariedade</h2>
-            <article>
-                <p>A ONG Solidariedade é uma organização sem fins lucrativos dedicada a promover o bem-estar social em comunidades vulneráveis. Fundada em 2010, atuamos em áreas como educação, saúde e meio ambiente, impactando mais de 10.000 pessoas anualmente.</p>
-                
-                <h3>Nossa Missão</h3>
-                <p>Empoderar indivíduos e comunidades por meio de projetos inovadores e parcerias sustentáveis.</p>
-                <p class="mission-detail">Nosso foco é a ação contínua, não apenas a assistência imediata. Buscamos soluções de longo prazo, desde o reforço escolar que abre portas para o mercado de trabalho até o acesso à saúde preventiva que garante qualidade de vida. Atuamos com base na escuta ativa das necessidades locais.</p>
-                
-                <h3>Nossos Valores</h3>
-                <ul class="values-list">
-                    <li><strong>Comprometimento e Transparência: </strong>Usamos cada recurso com responsabilidade e prestamos contas detalhadas aos nossos apoiadores.</li>
-                    <li><strong>Equidade e Inclusão:</strong> Lutamos para nivelar as oportunidades, alcançando aqueles que estão à margem da sociedade.</li>
-                    <li><strong>Respeito e Empatia:</strong> Baseamos nosso trabalho na compreensão e no acolhimento das histórias de vida de cada beneficiário.</li>
-                </ul>
-            </article>
-            </article>
-        </section>
+    <main id="app-container" class="main-content grid-container">
+    <div id="loading-indicator" style="text-align: center; padding: 50px;">Carregando...</div>
+</main>
 
-        <article class="section-support grid-col-12 grid-col-lg-1">
-            <h2>Por Que Nos Apoiar?</h2>
-                <p>Sua solidariedade é o motor da nossa missão.Cada doação se converte diretamente em um prato de comida, um livro ou uma vacina.</p>
-                
-                <p class="support-detail">Ainda que nosso impacto seja grande, a demanda nas comunidades vulneráveis cresce diariamente. Precisamos de você para expandir nossos programas de reforço escolar e levar mais mutirões de saúde para novos bairros. Sua contribuição é essencial para manter a esperança viva.</p>
-                
-                <img src="assets/Imagens/voluntarios.webp" alt="Voluntário ajudando crianças a estudar" class="responsive-img support-img">
-                <a href="cadastro.html" class="button-primary">QUERO ME CADASTRAR</a>
-            </div>
-        </article>
-    </main>
+<div id="action-modal" class="custom-modal-overlay hidden-modal">
+    <div class="custom-modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-message"></p>
+        
+        <button id="modal-close-btn" class="button-primary">OK, ENTENDIDO</button>
+        
+        <div id="modal-extra-actions"></div>
+    </div>
+</div>
+    
 
     <footer>
     <address>
@@ -83,5 +69,9 @@
     </address>
         <small>&copy; 2023 ONG Solidariedade. Todos os direitos reservados. Desenvolvido por Danilo Cavalcante</small>
     </footer>
+    <script src="assets/Javascript/template.js" defer></script>
+    <script src="assets/Javascript/cadastro.js"></script>
+    <script src="assets/Javascript/projetos.js"></script>
+    
 </body>
 </html>
