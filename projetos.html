@@ -5,34 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Solidariedade - Projetos Sociais</title>
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/projetos.css">
 </head>
 <body>
-    <header>
-        <img src="assets/Imagens/logo.png" alt="Logotipo da ONG Solidariedade, mostrando um cão e um gato" width="250px">
-        <h1>ONG Solidariedade</h1>
-        <p>Transformando vidas através de ações sociais e voluntariado</p>
+    <header class="main-header">
+    <div class="header-content grid-container">
+        
+        <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250px" class="imagem">
+        
+        <div class="header-text-group">
+            <h1>ONG Solidariedade</h1>
+            <p class="tagline">Transformando vidas através de ações sociais e voluntariado</p>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
+            <span class="hamburguer-icon"></span>
+        </label>
+        
+    </div>
     
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
+    <nav class="main-nav" aria-label="Navegação Principal">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Início</a></li>
+            <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+            <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
         </ul>
     </nav>
-    </header>
+</header>
 
     <main>
         <section>
             <h2>Nossos Projetos Sociais</h2>
             <article>
                 <h3>Projeto Educação para Todos</h3>
-                <p>Oferecemos aulas gratuitas e materiais escolares para crianças em situação de vulnerabilidade.</p>
+                <p>Investir em educação é quebrar o ciclo da pobreza. O Projeto Educação para Todos é a ponte entre a realidade difícil e um futuro de oportunidades para crianças em comunidades vulneráveis. Nossa equipe de educadores e voluntários oferece um ambiente de aprendizado seguro e estimulante, onde o conhecimento é valorizado. Ao garantir o acesso a aulas de qualidade e a materiais escolares que muitas famílias não podem custear, plantamos a semente da autonomia e do protagonismo, capacitando a nova geração a reescrever sua história.</p>
                 <img src="assets/Imagens/crianças.jpg" alt="Crianças  recebendo livros de voluntários" width="200">
             </article>
 
             <article>
                 <h3>Projeto Saúde Comunitária</h3>
-                <p>Campanhas de vacinação e atendimentos médicos em periferias urbanas.</p>
+                <p>Acreditamos que a saúde não deve ser um privilégio, mas um direito acessível a todos. O Projeto Saúde Comunitária atua nas comunidades mais carentes, rompendo barreiras geográficas e socioeconômicas. Montamos postos de atendimento itinerantes, oferecendo consultas básicas, orientações nutricionais e exames rápidos para resgatar a dignidade e a qualidade de vida. O pilar do projeto são as campanhas de vacinação em massa, essenciais para construir uma barreira de proteção coletiva e assegurar um futuro mais saudável para as famílias que vivem na margem das grandes cidades.</p>
                 <img src="assets/Imagens/medicos.jpg" alt="Equipe médica atendendo pacientes em uma feira de saúde comunitária" width="300">
             </article>
         </section>

@@ -6,23 +6,35 @@
     <title>Cadastro - ONG Solidariedade</title>
     <meta name="descrição" content="Cadastre-se para ser um voluntário, lar temporário ou para receber novidades sobre nossos animais.">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
 </head>
 <body>
+    
+    <header class="main-header">
+    <div class="header-content grid-container">
+        
+        <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250px" class="imagem">
+        
+        <div class="header-text-group">
+            <h1>ONG Solidariedade</h1>
+            <p class="tagline">Transformando vidas através de ações sociais e voluntariado</p>
+        </div>
 
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
+            <span class="hamburguer-icon"></span>
+        </label>
+        
+    </div>
     
-    <header>
-        <img src="assets/Imagens/logo.png" alt="Logotipo da ONG Solidariedade, mostrando um cão e um gato" width="250px">
-        <h1>ONG Solidariedade</h1>
-        <p>Transformando vidas através de ações sociais e voluntariado</p>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
+    <nav class="main-nav" aria-label="Navegação Principal">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Início</a></li>
+            <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+            <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
         </ul>
     </nav>
-    </header>
+</header>
 
     
     <main>
@@ -87,7 +99,7 @@
                             <label for="cidade" >Cidade</label>
                             <input type="text" id="cidade" name="cidade" required>
                         </div>
-                        <!-- Estado -->
+                       
                         <div>
                             <label for="estado" >Estado</label>
                             <select id="estado" name="estado" required>
