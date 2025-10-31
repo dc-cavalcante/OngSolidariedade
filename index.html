@@ -4,39 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Solidariedade - Página Inicial</title>
+    <link rel="shortcut icon" href="assets/Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="projetos.html">
 </head>
 <body>
-    <header>
-        <img src="assets/Imagens/logo.png" alt="Logotipo da ONG Solidariedade, mostrando um cão e um gato" width="250px">
-        <h1>ONG Solidariedade</h1>
-        <p>Transformando vidas através de ações sociais e voluntariado</p>
+    <header class="main-header">
+    <button id="theme-toggle" class="button-secondary" aria-label="Alternar Modo Escuro">
+        🌙 Mudar Tema
+    </button>
     
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-    </nav>
-    </header>
+    <div class="header-content grid-container">
+        <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250" class="imagem">
+        <div class="header-text-group">
+            <h1>ONG Solidariedade</h1>
+            <p class="tagline">Transformando vidas através de ações sociais e voluntariado</p>
+        </div>
+    </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
+            <span class="hamburguer-icon"></span>
+        </label>
+        <nav class="main-nav" aria-label="Navegação Principal">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li class="has-dropdown">
+                    <a href="projetos.html" class="nav-link">Projetos</a> 
+                    <ul class="dropdown-menu">
+                        <li><a href="projetos.html#educacao">Educação para Todos</a></li>
+                        <li><a href="projetos.html#saude">Saúde Comunitária</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+            </ul>
+        </nav>
+</header>
 
-    <main>
-        <section>
-            <h2>Sobre a ONG Solidariedade</h2>
-            <article>
-                <p>A ONG Solidariedade é uma organização sem fins lucrativos dedicada a promover o bem-estar social em comunidades vulneráveis. Fundada em 2010, atuamos em áreas como educação, saúde e meio ambiente, impactando mais de 10.000 pessoas anualmente.</p>
-                
-                <h3>Nossa Missão</h3>
-                <p>Empoderar indivíduos e comunidades por meio de projetos inovadores e parcerias sustentáveis.</p>
-            </article>
-        </section>
+    <main id="app-container" class="main-content grid-container">
+    <div id="loading-indicator" style="text-align: center; padding: 50px;">Carregando...</div>
+</main>
 
-        <section>
-            <h2>Por Que Nos Apoiar?</h2>
-            <p>Seu apoio faz a diferença. Junte-se a nós como voluntário ou doador.</p>
-            <img src="assets/Imagens/voluntarios.webp" alt="Foto de voluntários ajudando crianças em uma comunidade, com sorrisos e atividades educativas">
-        </section>
-    </main>
+<div id="action-modal" class="custom-modal-overlay hidden-modal">
+    <div class="custom-modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-message"></p>
+        
+        <div id="modal-extra-actions"></div>
+    </div>
+</div>
+    
 
     <footer>
     <address>
@@ -46,5 +64,9 @@
     </address>
         <small>&copy; 2023 ONG Solidariedade. Todos os direitos reservados. Desenvolvido por Danilo Cavalcante</small>
     </footer>
+    
+    <script type="module" src="assets/Javascript/main.js"></script>
+    
+    
 </body>
 </html>

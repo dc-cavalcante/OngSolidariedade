@@ -1,0 +1,123 @@
+main {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-neutral-100); 
+    min-height: 80vh; 
+}
+
+section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section:not(footer section) {
+    background-color: var(--color-neutral-000);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--spacing-xxl);
+}
+section h2 {
+    text-align: center;
+    border-color: var(--color-primary-100);
+}
+article {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--color-neutral-000);
+    transition: transform var(--transition-speed);
+}
+article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+article h3 {
+    color: var(--color-primary-500);
+}
+
+.volunteer-actions {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+    justify-content: flex-start;  
+}
+.volunteer-actions button {
+    flex-grow: 1; 
+    min-width: 150px; 
+}
+
+.tag-secondary {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    display: inline-block;
+    background-color: var(--color-neutral-000);
+}
+
+@media (min-width: 768px) {
+    article {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        align-items: flex-start;
+    }
+    article img {
+        flex-shrink: 0;
+        width: 40%;
+        max-width: 300px;
+    }
+    article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    article:nth-child(even) img {
+        margin-left: var(--spacing-lg);
+        margin-right: 0;
+    }
+}
+
+
+
+section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+section:last-child img {
+    
+    display: block; 
+    clear: both; 
+    margin: var(--spacing-md) auto;
+    width: 100%;
+    max-width: 300px; 
+}
+
+
+section a[href="#cadastro"] {
+    
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-align: center;
+    
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+
+    background-color: var(--color-secondary-500);
+    color: var(--color-neutral-900); 
+    
+    margin-top: var(--spacing-md); 
+    margin-bottom: var(--spacing-lg);
+}
+section a[href="#cadastro"]:hover {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-900);
+    transform: translateY(-2px);
+}
+section h2:last-of-type {
+    margin-top: var(--spacing-lg);
+    border-color: var(--color-secondary-500);
+}
