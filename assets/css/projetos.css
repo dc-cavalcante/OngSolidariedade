@@ -37,6 +37,7 @@ article:hover {
 article h3 {
     color: var(--color-primary-500);
 }
+
 .volunteer-actions {
     display: flex;
     flex-wrap: wrap; 
@@ -74,23 +75,32 @@ article h3 {
         margin-right: 0;
     }
 }
+
+
+
 section:last-child {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     text-align: center;
 }
 section:last-child img {
+    
+    display: block; 
+    clear: both; 
     margin: var(--spacing-md) auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px; 
 }
-section a[href="cadastro.html"] {
-    display: inline-flex;
+
+
+section a[href="#cadastro"] {
+    
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--border-radius);
     font-weight: bold;
     text-align: center;
+    
     transition: background-color var(--transition-speed), transform var(--transition-speed);
     cursor: pointer;
     border: none;
@@ -98,12 +108,13 @@ section a[href="cadastro.html"] {
 
     background-color: var(--color-secondary-500);
     color: var(--color-neutral-900); 
-    margin-top: var(--spacing-sm);
+    
+    margin-top: var(--spacing-md); 
     margin-bottom: var(--spacing-lg);
 }
-section a[href="cadastro.html"]:hover {
-    background-color: var(--color-secondary-900);
-    color: var(--color-neutral-000);
+section a[href="#cadastro"]:hover {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-900);
     transform: translateY(-2px);
 }
 section h2:last-of-type {

@@ -12,37 +12,34 @@
 </head>
 <body>
     <header class="main-header">
+    <button id="theme-toggle" class="button-secondary" aria-label="Alternar Modo Escuro">
+        🌙 Mudar Tema
+    </button>
+    
     <div class="header-content grid-container">
-        
         <img src="assets/Imagens/logo.png" alt="Logo ONG Solidariedade" width="250" class="imagem">
-        
         <div class="header-text-group">
             <h1>ONG Solidariedade</h1>
             <p class="tagline">Transformando vidas através de ações sociais e voluntariado</p>
         </div>
-
+    </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
         <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
             <span class="hamburguer-icon"></span>
         </label>
-        
-    </div>
-    
-    <nav class="main-nav" aria-label="Navegação Principal">
-        <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">Início</a></li>
-            
-            <li class="has-dropdown">
-            <a href="projetos.html" class="nav-link">Projetos</a> 
-            
-            <ul class="dropdown-menu">
-                <li><a href="projetos.html#educacao">Educação para Todos</a></li>
-                <li><a href="projetos.html#saude">Saúde Comunitária</a></li>
+        <nav class="main-nav" aria-label="Navegação Principal">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li class="has-dropdown">
+                    <a href="projetos.html" class="nav-link">Projetos</a> 
+                    <ul class="dropdown-menu">
+                        <li><a href="projetos.html#educacao">Educação para Todos</a></li>
+                        <li><a href="projetos.html#saude">Saúde Comunitária</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
             </ul>
-        </li>
-            <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
-        </ul>
-    </nav>
+        </nav>
 </header>
 
     <main id="app-container" class="main-content grid-container">
@@ -53,8 +50,6 @@
     <div class="custom-modal-content">
         <h3 id="modal-title"></h3>
         <p id="modal-message"></p>
-        
-        <button id="modal-close-btn" class="button-primary">OK, ENTENDIDO</button>
         
         <div id="modal-extra-actions"></div>
     </div>
@@ -69,9 +64,9 @@
     </address>
         <small>&copy; 2023 ONG Solidariedade. Todos os direitos reservados. Desenvolvido por Danilo Cavalcante</small>
     </footer>
-    <script src="assets/Javascript/template.js" defer></script>
-    <script src="assets/Javascript/cadastro.js"></script>
-    <script src="assets/Javascript/projetos.js"></script>
+    
+    <script type="module" src="assets/Javascript/main.js"></script>
+    
     
 </body>
 </html>

@@ -1,10 +1,5 @@
-// Funções de Ação Final (Definidas para satisfazer a chamada de registerForProject do main.js)
-// Estas são funções dummy. A lógica real está no projetos.js.
-function registerForProject(projectName, container) {} 
-function openPreActionModal(projectName, container) {}
-
-const PAGE_TEMPLATES = {
-    'index': {
+export const PAGE_TEMPLATES={
+        'index': {
         title: 'Início',
         content: `
             <section class="section-content grid-col-12 grid-col-lg-8">
@@ -47,8 +42,7 @@ const PAGE_TEMPLATES = {
                     <img src="assets/Imagens/crianças.jpg" alt="Crianças  recebendo livros de voluntários" width="200">
                     
                     <div class="volunteer-actions" data-project-name="Projeto Educação para Todos"> 
-                        <button class="button-primary js-action-voluntariar">Voluntariar Neste Projeto</button>
-                        <button class="button-secondary js-action-cadastro">Ainda Não Sou Cadastrado</button>
+                    <button class="button-primary js-action-voluntariar">Voluntariar Neste Projeto</button>
                     </div>
                 </article>
 
@@ -57,9 +51,8 @@ const PAGE_TEMPLATES = {
                     <p>Acreditamos que a saúde não deve ser um privilégio, mas um direito acessível a todos. O Projeto Saúde Comunitária atua nas comunidades mais carentes, rompendo barreiras geográficas e socioeconômicas. Montamos postos de atendimento itinerantes, oferecendo consultas básicas, orientações nutricionais e exames rápidos para resgatar a dignidade e a qualidade de vida. O pilar do projeto são as campanhas de vacinação em massa, essenciais para construir uma barreira de proteção coletiva e assegurar um futuro mais saudável para as famílias que vivem na margem das grandes cidades.</p>
                     <img src="assets/Imagens/medicos.jpg" alt="Equipe médica atendendo pacientes em uma feira de saúde comunitária" width="300">
                     
-                    <div class="volunteer-actions" data-project-name="Projeto Saúde Comunitária">
-                        <button class="button-primary js-action-voluntariar">Voluntariar Neste Projeto</button>
-                        <button class="button-secondary js-action-cadastro">Ainda Não Sou Cadastrado</button>
+                    <div class="volunteer-actions" data-project-name="Projeto Educação para Todos"> 
+                    <button class="button-primary js-action-voluntariar">Voluntariar Neste Projeto</button>
                     </div>
                 </article>
                 
@@ -216,74 +209,3 @@ const PAGE_TEMPLATES = {
         `
     }
 };
-
-const appContainer = document.getElementById('app-container');
-
-function renderPage(pageName) {
-    const pageData = PAGE_TEMPLATES[pageName] || PAGE_TEMPLATES['index'];
-    
-    appContainer.innerHTML = `<div id="loading-indicator">Carregando...</div>`;
-    document.title = `${pageData.title} - ONG Solidariedade`;
-
-    setTimeout(() => {
-        appContainer.innerHTML = pageData.content;
-        
-        if (pageName === 'cadastro' && typeof initializeFormValidation === 'function') {
-             initializeFormValidation(); 
-        }
-        
-        if (pageName === 'projetos' && typeof initializeProjectPage === 'function') {
-             initializeProjectPage(); 
-        }
-
-    }, 300);
-}
-
-document.addEventListener('click', function(e) {
-    
-    const clickedButton = e.target.closest('.js-action-voluntariar, .js-action-cadastro');
-    
-    if (clickedButton) {
-        e.preventDefault();
-        
-        const userIsRegistered = localStorage.getItem('user_status') === 'registered';
-
-        const container = clickedButton.closest('.volunteer-actions');
-        const projectName = container ? container.getAttribute('data-project-name') : '';
-        
-        
-        if (clickedButton.classList.contains('js-action-cadastro')) {
-            window.location.hash = 'cadastro';
-            return;
-        } 
-        
-        if (clickedButton.classList.contains('js-action-voluntariar')) {
-            
-            if (userIsRegistered) {
-                registerForProject(projectName, container);
-            } else {
-                openPreActionModal(projectName, container);
-            }
-        }
-    }
-});
-
-function handleRouting() {
-    const hash = window.location.hash.substring(1);
-    const pageName = hash || 'index';
-    renderPage(pageName);
-}
-
-window.addEventListener('hashchange', handleRouting);
-handleRouting();
-
-document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('index.html') || href.endsWith('.html')) {
-            e.preventDefault();
-            const page = href.split('/').pop().split('.')[0]; 
-            window.location.hash = page; 
-        }
-    });
-});

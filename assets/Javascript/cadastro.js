@@ -1,4 +1,4 @@
-function initializeFormValidation() {
+export function initializeFormValidation() {
     const form = document.getElementById('registration-form');
     const globalAlert = document.getElementById('global-alert');
     const inputs = form ? form.querySelectorAll('input, select') : []; 
@@ -57,7 +57,6 @@ function initializeFormValidation() {
                 if (globalAlert) {
                     globalAlert.classList.add('hidden');
                 }
-                
                 
                 localStorage.setItem('user_status', 'registered'); 
                 window.location.hash = 'cadastro-sucesso'; 
